@@ -1,6 +1,16 @@
+.game__field, .title {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 44px;
+  line-height: 1.5;
+}
+
+.title {
+  padding: 0;
+}
+
 .game {
   position: relative;
-  width: 300px;
+  width: 500px;
   border: 2px solid black;
 }
 .game__field {
@@ -8,9 +18,9 @@
   flex-wrap: wrap;
 }
 .game__cell {
-  box-sizing: border-box;
-  height: 100px;
   width: 100px;
+  height: 100px;
+  box-sizing: border-box;
   border: 1px dashed black;
 }
 .game__player {
@@ -37,6 +47,15 @@
 .game__player--row--5 {
   top: 410px;
 }
+.game__player--row--6 {
+  top: 510px;
+}
+.game__player--row--7 {
+  top: 610px;
+}
+.game__player--row--8 {
+  top: 710px;
+}
 .game__player--col--1 {
   left: 10px;
 }
@@ -45,6 +64,15 @@
 }
 .game__player--col--3 {
   left: 210px;
+}
+.game__player--col--4 {
+  left: 310px;
+}
+.game__player--col--5 {
+  left: 410px;
+}
+.game__player--color--black {
+  background-color: #000;
 }
 .game__player--color--red {
   background-color: #f00;

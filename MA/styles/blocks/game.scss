@@ -1,8 +1,7 @@
-$cell-size: 100px;
-$player-size: 0.8 * $cell-size;
-$base-shift: ($cell-size - $player-size) / 2;
-$col-count: 3;
-$row-count: 5;
+@use '../utils/mixins';
+@use '../utils/function';
+@use '../utils/extends';
+@use '../utils/variables' as *;
 
 .game {
   position: relative;
@@ -10,39 +9,38 @@ $row-count: 5;
   border: 2px solid black;
 
   &__field {
+    @extend %large-text;
     display: flex;
     flex-wrap: wrap;
   }
 
   &__cell {
+    @include mixins.squre($cell-size);
     box-sizing: border-box;
-    height: #{$cell-size};
-    width: #{$cell-size};
     border: 1px dashed black;
   }
 
   &__player {
     position: absolute;
-    width: #{$player-size};
-    height: #{$player-size};
-    border-radius: 50%;
+    @include mixins.circle($player-size);
     background-color: black;
     top: #{$base-shift};
     left: #{$base-shift};
 
     @for $index from 1 through $row-count {
       &--row--#{$index} {
-        top: $base-shift + ($index - 1) * $cell-size;
+        top: function.getShift($base-shift, $cell-size, $index);
       }
     }
 
     @for $index from 1 through $col-count {
       &--col--#{$index} {
-        left: $base-shift + ($index - 1) * $cell-size;
+        left: function.getShift($base-shift, $cell-size, $index);
       }
     }
 
     $colors:
+    'black' #000,
     'red' #f00,
     'yellow' #ff0,
     'green' #0f0,
