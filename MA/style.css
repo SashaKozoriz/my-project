@@ -10,7 +10,7 @@
 
 .game {
   position: relative;
-  width: 500px;
+  width: 600px;
   border: 2px solid black;
 }
 .game__field {
@@ -18,58 +18,58 @@
   flex-wrap: wrap;
 }
 .game__cell {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   box-sizing: border-box;
   border: 1px dashed black;
 }
 .game__player {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   background-color: black;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
 }
 .game__player--row--1 {
-  top: 10px;
+  top: 12px;
 }
 .game__player--row--2 {
-  top: 110px;
+  top: 132px;
 }
 .game__player--row--3 {
-  top: 210px;
+  top: 252px;
 }
 .game__player--row--4 {
-  top: 310px;
+  top: 372px;
 }
 .game__player--row--5 {
-  top: 410px;
+  top: 492px;
 }
 .game__player--row--6 {
-  top: 510px;
+  top: 612px;
 }
 .game__player--row--7 {
-  top: 610px;
+  top: 732px;
 }
 .game__player--row--8 {
-  top: 710px;
+  top: 852px;
 }
 .game__player--col--1 {
-  left: 10px;
+  left: 12px;
 }
 .game__player--col--2 {
-  left: 110px;
+  left: 132px;
 }
 .game__player--col--3 {
-  left: 210px;
+  left: 252px;
 }
 .game__player--col--4 {
-  left: 310px;
+  left: 372px;
 }
 .game__player--col--5 {
-  left: 410px;
+  left: 492px;
 }
 .game__player--color--black {
   background-color: #000;
