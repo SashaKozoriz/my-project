@@ -1,0 +1,22 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(93, 180, 42);
+  transition-duration: 2s;
+  transition-delay: 0.3s;
+  transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+}
+
+.box:hover {
+  color: white;
+  background-color: red;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
